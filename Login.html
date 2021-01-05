@@ -21,9 +21,9 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
-        sessionStorage.setItem("Name", profile.getName());
-        sessionStorage.setItem("Email", profile.getEmail());
-        
+        localStorage.setItem("Name", profile.getName());
+        localStorage.setItem("Email", profile.getEmail());
+        window.location = "/";
       }
     </script>
   </body>
