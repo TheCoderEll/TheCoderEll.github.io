@@ -15,7 +15,9 @@
 			}
 		</style>
 		<script>
-			document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
+			setTimeout(() => {
+				document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
+			}, 2000);
 		</script>
 	</head>
 	<body>
