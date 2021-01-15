@@ -6,16 +6,16 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-<button onclick="myFunction()">Sign Out</button>
-
 <script>
-function myFunction() {
-    gapi.auth2.getAuthInstance().signOut().then(function () {
-      console.log('User signed out.');
-      location.reload();
+  window.signOut = () => {
+    const auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(() => {
+      // User is now signed out
     });
+  }
+</script>
 
-}
+<button onclick="signOut">Sign out</button>
 </script>
   </body>
 </html>
