@@ -21,14 +21,16 @@
 }
 </style>
 <script>
+setTimeout(() => {
   document.getElementById("P").src = getCookie("IMG");
   document.getElementById("N").innerHTML = getCookie("Name");
   document.getElementById("E").innerHTML = getCookie("Email");
+}, 2000);
 </script>
 </head>
 <body>
 <div class="card">
-  <img id="P" src="" alt="Card pic" style="width:100%">
+  <img id="P" src="" alt="Card pic" style="width:50%">
   <div class="container">
     <h4 id="N"><b></b></h4> 
     <p id="E"></p> 
