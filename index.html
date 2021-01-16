@@ -15,6 +15,17 @@
 			}
 		</style>
 		<script>
+			function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+			function logout(){
+				setCookie("Name", "", 0);
+				setCookie("Email", "", 0);
+				window.location.reload;
+			}
 			setTimeout(() => {
 				if(getCookie("Name") != "" && getCookie("Name") != null) {
 					document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
@@ -31,5 +42,6 @@
 		<p><a href="/S">😊</a></p>
 		<p><a href="/WNO">👀</a></p>
 		<p><a href="/Login">Click here</a> to login</p>
+		<p><a href="#" onclick="logout()">Click here</a> to logout</p>
 	</body>
 </html>
