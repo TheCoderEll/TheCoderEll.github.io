@@ -16,7 +16,9 @@
 		</style>
 		<script>
 			setTimeout(() => {
-				document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
+				if(getCookie("Name") != "" && getCookie("Name") != Null) {
+					document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
+				}
 			}, 500);
 		</script>
 	</head>
