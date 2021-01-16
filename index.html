@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<script src="script.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<title>TheCoderEll web</title>
 		<style>
 			a {
@@ -28,11 +29,21 @@
 					document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
 				}
 		}, 100);
+			$(document).ready(function(){
+    				$.get("Bnews.md", function(data){
+     				 	document.getElementById("News").innerHTML = data + '<animate attributeName="x" from="-100" to="400" dur="10s" repeatCount="indefinite">';
+    				})
+			});
 		</script>
 	</head>
 	<body>
 		<h1>Welcome to TheCoderEll's website</h1>
 		<p id="N">Hi I am TheCoderEll</p>
+		<svg viewBox="0,0,300,100">
+    			<text id="News" x="" y="50">
+      				<animate attributeName="x" from="-100" to="400" dur="10s" repeatCount="indefinite">
+    			</text>
+		</svg>
 		<p>Want to play tetris well <a href="/Tetris">click here</a> to play</p>
 		<p><a href="/scratch">Click here</a> to see some scratch projects</p>
 		<p><a href="/News">Click here</a> to see latest news</p>
