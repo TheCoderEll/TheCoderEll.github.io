@@ -6,6 +6,7 @@
   </head>
   <body>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <button onclick="deleteAllCookies()">Sign out</button>
 </script>
     <script>
       function setCookie(cname, cvalue, exdays) {
@@ -29,6 +30,20 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+      }
+      function deleteAllCookies(){
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+
+                document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;domain=";
+                /*below line is to delete the google analytics cookies. they are set with the domain*/
+                document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;domain=" + location.hostname.replace(/^www\./i, "");
+
+        }
+        window.location.reload;
       }
     </script>
   </body>
