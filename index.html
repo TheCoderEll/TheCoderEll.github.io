@@ -28,8 +28,6 @@
 					document.getElementById("N").innerHTML = "Hi " + getCookie("Name") + ", I am TheCoderEll";
 				}
 		}, 500);
-		function Card() {
-			window.location = "/Card?" + getCookie("Name") + "?" + getCookie("Email") + "?" + getCookie("IMG");
 		</script>
 	</head>
 	<body>
@@ -42,6 +40,6 @@
 		<p><a href="/WNO">👀</a></p>
 		<p><a href="/Login">Click here</a> to login</p>
 		<p><a href="#" onclick="logout()">Click here</a> to logout</p>
-		<button onclick="Card()"></button>
+		<p><a href="/Card">Click here</a> to get a card</p>
 	</body>
 </html>
