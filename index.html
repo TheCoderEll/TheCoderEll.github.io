@@ -76,7 +76,7 @@
     				})
 			});
 			
-			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			document.getElementById("Body").style.backgroundColor = "rgba(0,0,0,0.4)";
 
 if (getCookie("CA") == "T"){
   Close()
@@ -84,12 +84,12 @@ if (getCookie("CA") == "T"){
 
 function Close() {
   document.getElementById("navbar").style.display = "none";
-  document.body.style.backgroundColor = "white";
+  document.getElementById("Body").style.backgroundColor = "white";
   setCookie("CA", "T", 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
 }
 		</script>
 	</head>
-	<body>
+	<body id="Body">
 		<div class="navbar" id="navbar">
   <p onclick="Close()">By continuing on this website you agree to continue with cookies. Tap on this message to continue</p>
 </div>
