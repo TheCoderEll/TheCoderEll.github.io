@@ -75,13 +75,13 @@
      				 	document.getElementById("News").innerHTML = data + '<animate attributeName="x" from="-100" to="400" dur="10s" repeatCount="indefinite">';
     				})
 			});
-			
-			document.getElementById("Body").style.backgroundColor = "rgba(0,0,0,0.4)";
+			$(document).ready(function(){
+				document.getElementById("Body").style.backgroundColor = "rgba(0,0,0,0.4)";
 
 if (getCookie("CA") == "T"){
   Close()
 }
-
+			});
 function Close() {
   document.getElementById("navbar").style.display = "none";
   document.getElementById("Body").style.backgroundColor = "white";
