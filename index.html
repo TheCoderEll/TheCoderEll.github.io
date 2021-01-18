@@ -19,6 +19,39 @@
 				text-decoration: none;
 				text-color: black;
 			}
+			
+			.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
 		</style>
 		<script>
 			function setCookie(cname, cvalue, exdays) {
@@ -42,9 +75,24 @@
      				 	document.getElementById("News").innerHTML = data + '<animate attributeName="x" from="-100" to="400" dur="10s" repeatCount="indefinite">';
     				})
 			});
+			
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+if (getCookie("CA") == "T"){
+  Close()
+}
+
+function Close() {
+  document.getElementById("navbar").style.display = "none";
+  document.body.style.backgroundColor = "white";
+  setCookie("CA", "T", 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+}
 		</script>
 	</head>
 	<body>
+		<div class="navbar" id="navbar">
+  <p onclick="Close()">By continuing on this website you agree to continue with cookies. Tap on this message to continue</p>
+</div>
 		<h1>Welcome to TheCoderEll's website</h1>
 		<p id="N">Hi I am TheCoderEll</p>
 		<svg viewBox="0,0,300,50">
