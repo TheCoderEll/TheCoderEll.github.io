@@ -25,6 +25,7 @@ setTimeout(() => {
   document.getElementById("P").src = getCookie("IMG");
   document.getElementById("N").innerHTML = getCookie("Name");
   document.getElementById("E").innerHTML = getCookie("Email");
+  document.getElementById("CT").innerHTML = getCookie("CT");
 }, 100);
 </script>
 </head>
@@ -33,7 +34,8 @@ setTimeout(() => {
   <img id="P" src="" alt="Card pic" style="width:25%">
   <div class="container">
     <h4 id="N"><b></b></h4> 
-    <p id="E"></p> 
+    <p id="E"></p>
+	  <p id="CT"></p>
   </div>
 </div>
 </body>
