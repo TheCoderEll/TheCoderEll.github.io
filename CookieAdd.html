@@ -1,0 +1,24 @@
+<!DOCTYPEhtml>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+		<script src="script.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    </script>
+  </head>
+  <body>
+    <a href="/">Back</a>
+    <input placeholder="Name" id="Name">
+    <input placeholder="Value" id="Value">
+    <input placeholder="Number" id="N">
+    <br>
+    <button onclick="setCookie(document.getElementById("Name").value, document.getElementById("Value").value, Number(document.getElementById("N").value)">Add</button>
+  </button>
+</html>
