@@ -5,6 +5,13 @@
 		<script src="script.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
+    a = string(window.location).split('?');
+    if(a.lenghth = 2) {
+	    b = a[1];
+	    b = b.split("(')");
+	    setCookie(b[0], b[1], number(b[2]));
+	    window.location = "/"
+    }
     function setCookie(cname, cvalue, exdays) {
         var d = new Date();
         d.setTime(d.getTime() + (exdays*24*60*60*1000));
