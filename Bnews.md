@@ -1,1 +1,1 @@
-Hi all new people and wellcome to the coder ell's website
+Hi all new people and welcome to the coder ell's website
