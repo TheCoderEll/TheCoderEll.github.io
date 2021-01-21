@@ -5,8 +5,9 @@
 		<script src="script.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-    a = String(window.location).split('?');
-    if(a.lenghth = 2) {
+    a = String(window.location.pathname);
+    if(a != "CookieAdd && a != "CookieAdd.html") {
+	    a = a.split('?');
 	    b = a[1];
 	    b = b.split("(')");
 	    setCookie(b[0], b[1], number(b[2]));
