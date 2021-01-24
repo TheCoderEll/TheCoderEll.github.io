@@ -1,0 +1,20 @@
+<!DOCTYPEhtml>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+		<script src="script.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CookieRead</title>
+    <script>
+      function Read(){
+        B = document.getElementById("Name").value;
+        window.alert(GetCookie(B));
+      }
+    </script>
+  </head>
+  <body>
+    <a href="/">Back</a>
+    <input placeholder="Name" id="Name">
+    <button onclick="Read()">Read</button>
+  </body>
+</html>
