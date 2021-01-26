@@ -77,7 +77,15 @@
 			});
 			$(document).ready(function(){
 				document.getElementById("Body").style.backgroundColor = "rgba(0,0,0,0.4)";
-
+				$.get("not.txt", function(data){
+					if (getCookie("READ") == ""){
+						setCookie("READ", 0, 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+					}
+					m = data.split(' [{#}] ');
+					a = m.lenght - getCookie("READ");
+					setCookie("READ", m.lenght, 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+					document.getElementById("NewNot").innerHTML = a;
+  				});
 if (getCookie("CA") == "T"){
   Close()
 }
@@ -93,7 +101,14 @@ function Close() {
 		<div class="navbar" id="navbar">
   <p onclick="Close()">By continuing on this website you agree to continue with cookies. Tap on this message to continue</p>
 </div>
-		<h1>Welcome to TheCoderEll's website</h1>
+		<ul>
+  <li><h1>Welcome to TheCoderEll's website</h1></li>
+  <li style="float:right; margin:10px"><a href="#" class="notification">
+  <span>Inbox</span>
+  <span class="badge" id="NewNot">0</span>
+</a>
+</li>
+</ul>
 		<p id="N">Hi I am TheCoderEll</p>
 		<svg viewBox="0,0,300,50">
     			<text id="News" x="" y="25">
