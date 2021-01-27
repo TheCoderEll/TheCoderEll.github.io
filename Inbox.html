@@ -6,19 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<title>TheCoderEll web</title>
-    <script>
-var toDoList = document.getElementById("list");
-      $.get("not.md", function(data){
-        var a = data.split(' [{#}] ')
-        for (var i = 0; i < a.length; i++) {
-            var toDo = a[i];
-            var toDoItem = document.createElement("li");
-            var toDoText = document.createTextNode(toDo);
-            toDoItem.appendChild(toDoText);
-	toDoList.appendChild(toDoItem);
-          }
-      })
-    </script>
+    		<script>
+			var toDoList = document.getElementById("list");
+      			$.get("not.md", function(data){
+        			var a = data.split(' [{#}] ')
+        			for (var i = 0; i < a.length; i++) {
+        	   			var toDo = a[i];
+		    			var toDoItem = document.createElement("li");
+					var toDoText = document.createTextNode(toDo);
+            				toDoItem.appendChild(toDoText);
+					toDoList.appendChild(toDoItem);
+          			}
+      			})
+    		</script>
   </head>
   <body>
     <a href="/">Back</a>
