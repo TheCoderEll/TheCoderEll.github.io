@@ -9,7 +9,7 @@
     <script>
       var toDoList = document.getElementById("list");
       $.get("not.md", function(data){
-        a = data.split(' [{#}] ')
+        var a = data.split(' [{#}] ')
       })
       for (var i = 0; i < a.length; i++) {
         var toDo = toDos[i];
