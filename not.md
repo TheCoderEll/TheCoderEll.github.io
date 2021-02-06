@@ -1,1 +1,1 @@
-Hi eveveryone this is the notification section [{#}] You will get notifications here
+Hi eveveryone this is the notification section [{#}] You will get notifications here [{#}] New Cookie Policy <a onclik='setCookie("CA", "", 0)'>Click here</a> to veiw it when you rturn to the home page
