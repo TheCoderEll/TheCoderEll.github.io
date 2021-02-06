@@ -130,9 +130,50 @@
         var expires = "expires="+ d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
       }
-      $(document).ready(function(){
+	function WE(AB){
+		L = getCookie("Level");
+		H1 = document.getElementById("h1");
+		if (AB == L) {
+			if (L = "") {
+				setCookie("Level", "A", 100000000000000000000000000000000000);
+			}
+			if (L = "A") {
+				setCookie("Level", "B", 100000000000000000000000000000000000);
+			}
+			if (L = "B") {
+				setCookie("Level", "C", 100000000000000000000000000000000000);
+			}
+			if (L = "C") {
+				setCookie("Level", "D", 100000000000000000000000000000000000);
+			}
+			if (L = "D") {
+				setCookie("Level", "E", 100000000000000000000000000000000000);
+			}
+			if (L = "E") {
+				setCookie("Level", "F", 100000000000000000000000000000000000);
+			}
+			if (L = "F") {
+				setCookie("Level", "G", 100000000000000000000000000000000000);
+			}
+			if (L = "G") {
+				setCookie("Level", "H", 100000000000000000000000000000000000);
+			}
+			if (L = "H") {
+				setCookie("Level", "I", 100000000000000000000000000000000000);
+			}
+			if (L = "I") {
+				setCookie("Level", "J", 100000000000000000000000000000000000);
+			}
+			H1.innerHTML = "Correct";
+			setTimeout(() => {  window.location.reload; }, 2500);
+		}
+		else {
+			H1.innerHTML = "Try again";
+			
+
+       $(document).ready(function(){
         H1 = document.getElementById("h1");
-        L = getCookie("Level")
+        L = getCookie("Level");
         if (L == "") {
           H1.innerHTML = "Click on Google";
 	}
@@ -163,7 +204,14 @@
 	if (L == "I") {
 	  H1.innerHTML = "CLick on skype";
 	}
+	if (L == "J") {
+	  H1.innerHTML = "<p onclick='Z()'>Click here to restart</p>";
+	}
 	});
+	function Z() {
+		setCookie("Level", "", 0);
+		window.location.reload;
+	}
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
