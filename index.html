@@ -168,5 +168,30 @@ function Close() {
 		<p><a href="/WNO">👀</a></p>
 		<p><a href="/Login">Click here</a> to login</p>
 		<p><a href="/Card">Click here</a> to get a card</p>
+                <button onclick="S4N()">Stats for nerds</button>
+
 	</body>
+        <script> 
+
+  
+
+        function SN() { 
+
+            var cookies = document.cookie.split(';'); 
+
+            var ret = ''; 
+
+            for (var i = 1; i <= cookies.length; i++) { 
+
+                ret += i + ' - ' + cookies[i - 1] + "<br>"; 
+
+            } 
+
+            return ret; 
+
+        } 
+        function S4N(){
+            alert(SN())
+
+    </script> 
 </html>
